@@ -1,0 +1,30 @@
+package com.employee;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class StringOperation {
+
+	public static void main (String [] args) {
+		List<String> list=new ArrayList<>();	
+		String input="anusha";
+		String cyclic="haanus";
+		for(int i=1;i<input.length();i++) {
+			list.add(input.substring(input.length()-i)+input.substring(0, input.length()-i));
+		}
+		/*
+		 * list.add(input.substring(input.length()-1)+input.substring(0,input.length()-5));
+		 * list.add(input.substring(input.length()-2)+input.substring(0,4 ));
+		 * list.add(input.substring(input.length()-3)+input.substring(0, 3));
+		 * list.add(input.substring(input.length()-4)+input.substring(0, 2));
+		 * list.add(input.substring(input.length()-5)+input.substring(0, 1));
+		 */
+		if(list.contains(cyclic)) {
+			System.out.println("The string "+cyclic+" is cylic");
+		}
+		else {
+			System.out.println("The String"+cyclic+" is not cyclic");
+		}
+		System.out.println(list);
+	}
+}
